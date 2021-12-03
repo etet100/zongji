@@ -69,7 +69,7 @@ var defineTypeTest = function(name, fields, testRows, customTest, minVersion) {
           _type: 'WriteRows',
           _checkTableMap: function(test, event) {
             var tableDetails = event.tableMap[event.tableId];
-            test.strictEqual(tableDetails.parentSchema, settings.database);
+            test.strictEqual(tableDetails.schemaName, settings.database);
             test.strictEqual(tableDetails.tableName, testTable);
           }
         };

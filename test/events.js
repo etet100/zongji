@@ -10,7 +10,7 @@ var conn = process.testZongJi || {};
 var checkTableMatches = function(tableName) {
   return function(test, event) {
     var tableDetails = event.tableMap[event.tableId];
-    test.strictEqual(tableDetails.parentSchema, settings.database);
+    test.strictEqual(tableDetails.schemaName, settings.database);
     test.strictEqual(tableDetails.tableName, tableName);
   };
 };
