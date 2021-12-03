@@ -219,7 +219,7 @@ ZongJi.prototype._fetchTableInfo = function(tableMapEvent, next) {
 
     self.tableMap[tableMapEvent.tableId] = {
       columnSchemas: rows,
-      parentSchema: tableMapEvent.schemaName,
+      schemaName: tableMapEvent.schemaName,
       tableName: tableMapEvent.tableName
     };
 
